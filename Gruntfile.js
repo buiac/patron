@@ -158,9 +158,10 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: '<%= yeoman.app %>/images',
+					cwd: '<%= yeoman.dist %>/images',
+					//src: '{,*/}*.{png,jpg,jpeg}',
 					src: '{,*/}*.{png,jpg,jpeg}',
-					dest: '<%= yeoman.dist %>/images'
+					dest: ''
 				}]
 			}
 		},
@@ -185,15 +186,8 @@ module.exports = function (grunt) {
 						'CNAME',
 						'*.*',
 						'bower_components/**/*',
-						'images/{,*/}*.{gif,webp,svg}',
+						'images/{,*/}*.{gif,webp,svg,png,jpg,jpeg}',
 						'styles/fonts/*'
-					]
-				}, {
-					expand: true,
-					cwd: '.tmp/images',
-					dest: '<%= yeoman.dist %>/images',
-					src: [
-						'generated/*'
 					]
 				}]
 			}
@@ -240,14 +234,14 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'clean:dist',
 		'concurrent:dist',
-		'imagemin',
 		'htmlmin',
 		'useminPrepare',
 		'copy:dist',
+		//'imagemin',
 		'concat',
 		'cssmin',
 		'uglify',
-		'rev',
+		//'rev',
 		'usemin'
 	]);
 
