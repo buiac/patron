@@ -1,0 +1,271 @@
+---
+layout: page.html
+title: About
+---
+
+<div class="body_wapper">
+    <!-- Content -->
+    <div id="content" class="container clearfix">
+      <section class="row-fluid content">
+        <h1 id="page-title">
+			{{ title }}
+        </h1>
+        <div class="row-fluid">
+          <div id="col-main" class="container">
+            <div id="product" class="content row-fluid">
+              <div id="product-image" class="product-image">
+                <div class="product-image-thumb hidden-phone span3">
+                  <a class="prev prev-thumb" title="Previous" href="#"><i class="icon-chevron-up"></i></a>
+                  <a class="next next-thumb" title="Next" href="#"><i class="icon-chevron-down"></i></a>
+                  <div class="wrap_thumb">
+                    <div id="gallery_01" class="list_carousel responsive" style="height:262px;">
+                      <ul class="product-thumb slides unstyled">
+                        <li class="thumb-zoom">       
+                          <a class="active" href="/images/products/{{ img }}" data-image="/images/products/{{ img }}" data-zoom-image="/images/products/{{ img }}">
+                            <img src="/images/products/{{ img }}" alt=""/>
+                          </a>
+                        </li>
+                      </ul>
+                    </div><!--end list_carousel-->
+                  </div><!--end wrap thumb-->          
+                </div>
+                <div class="product-image-thumb-hid visible-phone">
+                  <a class="pre prev-thumb-hid" title="Previous" href="#"><i class="icon-chevron-left"></i></a>
+                  <a class="next next-thumb-hid" title="Next" href="#"><i class="icon-chevron-right"></i></a>
+                  <div class="wrap_thumb_hid">
+                    <div id="gallery_02" class="list_carousel responsive">
+                      <ul class="product-thumb-hid slides unstyled">
+                        <li class="active thumb-zoom">       
+                          <a href="/images/products/{{ img }}" data-image="/images/products/{{ img }}" data-zoom-image="/images/products/{{ img }}">
+                            <img src="/images/products/{{ img }}" alt=""/>
+                          </a>
+                        </li>
+                      </ul>
+                    </div><!--end list_carousel-->
+                  </div><!--end wrap thumb-->          
+                </div>
+                <div class="product-image-wrapper span6">
+                  <a target="_blank" href="/images/products/{{ img }}" class="main-image elevatezoom fancybox">
+                    <img id="product-img" class="img-responsive image-fly" src="/images/products/{{ img }}" data-zoom-image="/images/products/{{ img }}" alt="" />
+                  </a>           
+                </div>
+                <div class="span3">
+                  <div id="sharing" class="clearfix">
+                    <ul class="unmargin unpadding">
+                      <li class="unpadding">
+                        <div id="fb-root"></div>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div>          
+                      </li>
+                      <li class="unpadding">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+                      </li>
+                      <li class="unpadding">
+                        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="90"></div>
+                      </li>
+                      <li class="unpadding">
+                        <a data-pin-do="buttonPin" data-pin-config="beside" href="http://pinterest.com/pin/create/button/?url=" class="pin-it-button" count-layout="horizontal"><img alt="" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+                        <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- fb like button -->
+                  <div id="fb-root"></div>
+                  <script type="text/javascript">
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) {return;}
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                  </script>
+                  <!-- +1 button -->
+                  <script type="text/javascript">
+                    (function() {
+                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                      po.src = 'https://apis.google.com/js/plusone.js';
+                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                  </script>
+                  <!-- tweet btn -->
+                  <script defer type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+                </div>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span12">
+                <div id="product-information" class="product-information">
+                  <h3 class="page-title">
+					{{ title }}
+                  </h3> 
+                  <div id="product-header" class="clearfix">
+                    <div class="description">
+						<span>
+							{{> body }}
+						</span> 
+                    </div>
+                    <div class="form-pro">
+                      <hr class="detail-line">
+                      
+						<div class="detail-price">
+							<del class="price_compare"><span class="money"><span class="money">€{{ price_old }}</span></span></del>
+							<span class="price_sale"><span class="money"><span class="money">€{{ price_new }}</span></span>
+							</span>
+						</div>
+                      
+                      <hr class="detail-line">
+                    </div>
+                  </div>
+                  <!-- /#product-header -->
+                </div>
+                <!-- /#product-information -->
+              </div>
+            </div>
+            
+            <section class="rel-container clearfix">
+              <header class="control-group clearfix">
+                <div>
+                  <h3 class="title1">Related products</h3>
+                </div>
+              </header>
+              
+              <div id="prod-related" class="prod-related">
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="0">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart" title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€600.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="200">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart" title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€500.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="400">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart" title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€550.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="600">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart" title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€450.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="800">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart" title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€480.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="item fadeInUp not-animated" data-animate="fadeInUp" data-delay="1000">
+                    <ul class="unstyled animated text-center clearfix">
+                      <li class="row-left hover-left-image">
+                        <a href="./product.html" class="hoverBorder" title="Beatae Vitae Dicta"> <span class="hoverBorderWrapper"> <img src="./screen/demos/demo_270x350.png" class="pulse image-fly" alt="Beatae Vitae Dicta"/> <span class="theHoverBorder"></span> </span>
+                          <div class="product-ajax-cart">
+                            <div class="product-ajax-cart-wrapper hidden-phone float-left qs-pro">
+                              <div title="Quick Shop" data-target="./ajax/_product-qs.html" class="quick_shop btn btn-qs btn-block"> <i class="icon-eye-open"></i>  
+                              </div>
+                            </div>
+                            <div class="product-ajax-cart-wrapper float-right cart-pro">
+                              <div class="btn btn-qs btn-block add-to-cart" data-parent=".product-ajax-cart"  title="Add To Cart"><i class="icon-shopping-cart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="product-price">
+                            <h4>Beatae Vitae Dicta</h4> 
+                            <hr class="mini-line"> <span class="price"> <span class="money">€490.00</span> </span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
