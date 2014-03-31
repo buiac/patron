@@ -251,7 +251,6 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('deploy', [
-		'default',
 		'buildcontrol:dist'
 	]);
 
